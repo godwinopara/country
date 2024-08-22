@@ -12,7 +12,7 @@ export default function CountryCard({ url, country }: CountryCardProps) {
         className="h-[150px] w-full relative border border-yellow-500 bg-center"
         style={{ backgroundImage: `url(${country.flags.svg})`, backgroundSize: "cover", backgroundPosition: "center" }}
       ></div>
-      <Link to={url} className=" block p-4 border rounded shadow hover:shadow-lg transition">
+      <div className=" block p-4 border rounded shadow hover:shadow-lg transition">
         <h2 className="text-lg font-bold mb-3">{country.name.common}</h2>
         <p className="flex gap-x-2">
           <span className="font-semibold mb-1 block">Population:</span>
@@ -26,7 +26,10 @@ export default function CountryCard({ url, country }: CountryCardProps) {
           <span className="font-semibold mb-1 block">Capital:</span>
           {country.capital}
         </p>
-      </Link>
+        <Link to={url} className="mt-5 block text-center bg-gray-200 w-full text-gray-900 py-2 px-6">
+          Learn More
+        </Link>
+      </div>
     </div>
   );
 }

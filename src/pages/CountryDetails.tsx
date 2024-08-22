@@ -12,7 +12,7 @@ export default function CountryDetails() {
     return <div>{error}</div>;
   }
   if (!country) {
-    return <div>No country data available</div>;
+    return <div>No country data available yet</div>;
   }
 
   const { flags, name, population, region, capital, currencies, languages, timezones } = country;
