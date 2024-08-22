@@ -12,14 +12,12 @@ export default function CountryList() {
     return <div>{error}</div>;
   }
 
-  console.log(countries);
-
   return (
     <div className="p-4 max-w-7xl mx-auto">
       {/* Container with grid layout */}
       <div className="grid grid-cols-4 gap-10">
         {countries.map((country) => (
-          <CountryCard url={``} key={country.cca3} country={country} />
+          <CountryCard url={`/country/${country.name.common}`} key={country.cca3} country={country} />
         ))}
       </div>
     </div>

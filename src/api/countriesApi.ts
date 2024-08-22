@@ -10,7 +10,7 @@ export const fetchAllCountries = async () => {
 };
 
 export const fetchCountry = async (fullname: string) => {
-  const response = await axios.get<Country>(`${BASE_URL}/name/${fullname}?fullText=true`);
-  const data = response.data;
+  const response = await axios.get<Country[]>(`${BASE_URL}/name/${fullname}?fullText=true`);
+  const data = response.data[0];
   return data;
 };
