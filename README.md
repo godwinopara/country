@@ -1,50 +1,88 @@
-# React + TypeScript + Vite
+# Country Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Country Explorer is a React application that allows users to browse and explore detailed information about countries around the world. The project uses the [REST Countries API](https://restcountries.com/) to fetch and display data about various countries. Users can view a list of countries, click on a country to see detailed information, and navigate back to the list.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [API Reference](#api-reference)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Country List:** View a list of all countries, displaying basic information such as the country's name and flag.
+- **Country Details:** Click on a country to view detailed information, including population, region, capital, currencies, languages, and more.
+- **Responsive Design:** The application is fully responsive, providing a seamless experience on mobile, tablet, and desktop devices.
+- **TypeScript Support:** Strong typing with TypeScript ensures code quality and reduces runtime errors.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Prerequisites
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Before you begin, ensure you have the following installed:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- [Node.js](https://nodejs.org/) (v14 or later)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Steps
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/country-explorer.git
+
+2. Navigate to the project directory:
+ 
+  ```bash
+    cd country-explorer
+
+3. Install Dependencies:
+  
+  ```bash
+    npm install
+      # or if you're using yarn
+    yarn install
+
+4 Start the development server:
+
+  ```bash
+      npm start
+        # or if you're using yarn
+      yarn start
+    
+5 Open your browser and go to http://localhost:3000 to see the app in action.
+
+## Usage
+
+### Viewing Countries
+On the homepage, you can view a list of countries. The list is fetched from the [REST Countries API](https://restcountries.com/) and displayed in a grid layout.
+
+### Country Details
+Click on a country card to view more details about the country, including its flag, population, region, capital, and more.
+
+## Technologies Used
+
+- **React**: Frontend library for building user interfaces.
+- **TypeScript**: Superset of JavaScript that adds static types.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **React Router**: Library for handling routing in React.
+- **REST Countries API**: External API used to fetch country data.
+
+## API Reference
+
+This project uses the [REST Countries API](https://restcountries.com/) to retrieve country data.
+
+### Endpoints Used
+
+- **Get All Countries**: `https://restcountries.com/v3.1/all`
+- **Get Country by Name**: `https://restcountries.com/v3.1/name/{name}`
+
+
+
+
